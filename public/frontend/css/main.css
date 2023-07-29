@@ -1,0 +1,261 @@
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover {
+    color: #ff0000;
+}
+
+.page-link:not(:disabled):not(.disabled) {
+    color: #ff0000;
+}
+
+.page-item.active .page-link {
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+
+.pagination {
+    justify-content: center;
+    margin: 0 0 30px 0;
+}
+
+@media(max-width: 800px) {
+
+    .header a.icon#searchIcon,
+    .header a.icon#topIcon {
+        top: 35px;
+    }
+
+    .header.hasSearch a.icon#topIcon,
+    .header.hasSearch a.icon#searchIcon {
+        top: 85px;
+    }
+}
+
+/*  */
+
+.purchaseBtn-container {
+    display: flex;
+    padding: 7px 0;
+    position: relative;
+    float: left;
+}
+
+.purchaseBtn-container .purchaseFixed {
+    margin: 0 !important;
+    border: 2px solid #fff;
+    font-size: 14px;
+    padding: 0px 10px;
+    /* border-right: none; */
+}
+
+.purchaseBtn-container .testDriveBtn {
+    background-color: #ff9101;
+    color: #fff;
+    font-size: 14px;
+    /* width: 50px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    margin-left: 10px;
+    padding: 5px 10px;
+    /* display: none; */
+}
+
+.purchaseBtn-container .testDriveBtn img {
+    width: 22px;
+}
+
+.shortDesc {
+    position: relative;
+}
+
+.shortDesc .car-card-test__drive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 57px;
+    height: 57px;
+    background-image: url('images/car-card__testDrive_ar.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+.header a.icon#searchIcon,
+.header a.icon#topIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.logo {
+    display: contents;
+}
+
+.saleh-new-price .saleh-price-current {
+    margin-left: 5px;
+}
+
+.car_price {
+    margin-top: 45px;
+}
+
+.saleh-new-price .saleh-price-before {
+    height: 37.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: rtl
+}
+
+@media (min-width: 700px) and (max-width: 1060px) {
+    nav {
+        margin-top: 10px;
+    }
+
+    .leftNavIpad {
+        display: flex !important;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .leftNavIpad .favHeader span,
+    .leftNavIpad .callTop span {
+        display: none;
+    }
+
+    .leftNavIpad .langbar {
+        margin-left: 10px;
+    }
+
+    .leftNavIpad .callTop {
+        margin-top: 10px;
+    }
+}
+
+.contactBtns {
+    float: right;
+}
+
+@media(max-width: 800px) {
+    .contactBtns a {
+        margin-left: 10px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 74px;
+        margin-top: 7px;
+    }
+
+    .contactBtns a span {
+        margin-left: 4px;
+    }
+}
+
+@media(max-width: 376px) {
+    .contactBtns a {
+        width: 30px;
+        height: 30px;
+        margin-top: 12px;
+    }
+
+    .purchaseBtn-container .testDriveBtn,
+    .purchaseBtn-container .purchaseFixed {
+        font-size: 10px;
+        padding: 5px
+    }
+}
+
+/*  */
+
+.testDrive {
+    position: absolute;
+    padding: 9px;
+    z-index: 9999;
+    /* display: none; */
+    transition: all 300ms ease-in-out;
+    opacity: 0;
+    top: -40px;
+    right: -40px;
+    font-size: 21px;
+    display: inline-block;
+    opacity: 1;
+    top: 30px;
+    right: 0;
+}
+
+.testDrive img {
+    width: 22px !important;
+}
+
+.car:hover .testDrive {
+    display: inline-block;
+    opacity: 1;
+    top: 30px;
+    right: 0;
+}
+
+@media(max-width:800px) {
+    .social-footer a {
+        width: 40px;
+        height: 40px;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-footer a:not(:last-child) {
+        margin-left: 20px;
+    }
+}
+/*  */
+#rev_slider_13_1 .uranus .tp-bullet {
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+    -webkit-transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    background: transparent;
+    width: 15px;
+    height: 15px;
+}
+
+#rev_slider_13_1 .uranus .tp-bullet.selected,
+#rev_slider_13_1 .uranus .tp-bullet:hover {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+}
+
+#rev_slider_13_1 .uranus .tp-bullet-inner {
+    -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.3);
+    text-indent: -999em;
+    cursor: pointer;
+    position: absolute;
+}
+
+#rev_slider_13_1 .uranus .tp-bullet.selected .tp-bullet-inner,
+#rev_slider_13_1 .uranus .tp-bullet:hover .tp-bullet-inner {
+    transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    background-color: rgb(255, 255, 255);
+}
