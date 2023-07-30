@@ -101,12 +101,18 @@
                 <li class="nav-item" role="presentation">
                     <button class="btn-tab nav-link active" id="pills-home-tab" data-toggle="pill"
                         data-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
-                        aria-selected="true"> أفراد</button>
+                        aria-selected="true"> 
+                        <i class="fas fa-users"></i>
+                        أفراد
+                    </button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="btn-tab nav-link" id="pills-profile-tab" data-toggle="pill"
                         data-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
-                        aria-selected="false">شركات</button>
+                        aria-selected="false">
+                        <i class="fas fa-building"></i>
+                        شركات
+                    </button>
                 </li>
             </ul>
 
@@ -117,22 +123,31 @@
                        
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="sellers-mobile">رقم جوال البائع</label>
+                                <label for="sellers-mobile">
+                                    <i class="fas fa-phone"></i>
+                                    رقم جوال البائع
+                                </label>
                                 <input type="number" class="form-control" id="sellers-mobile"
                                     aria-describedby="sellersMobile">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="sellers-mobile">رقم جوال المشتري</label>
+                                <label for="sellers-mobile">
+                                    <i class="fas fa-phone"></i>
+                                    رقم جوال المشتري
+                                </label>
                                 <input type="number" class="form-control" id="sellers-mobile"
                                     aria-describedby="sellersMobile">
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <label for="sellers-mobile"> المستندات </label>
-                            <div class="file-upload">
-                                <input type="file" id="upload" class="upload">
+                            <label for="sellers-mobile"> 
+                                <i class="fas fa-file"></i>
+                                المستندات 
+                            </label>
+                            <div class="file-upload" style="cursor: pointer">
+                                <input name="files" multiple type="file" id="upload" class="upload" style="cursor: pointer">
                             </div>
                         </div>
                         <div class="col-md-12">
