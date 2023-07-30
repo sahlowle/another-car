@@ -16,8 +16,8 @@
                 </ul>
                 <div class="col-md-3 order-3">
                     <a class="logo" href="/">
-                        <img width="255" height="102" src= "/frontend/images/logo.png" alt="شعار مجموعة صالح للسيارات">
-                        <!-- <img width="255" height="102" src="fonts/Saleh_Logo_ar.svg" alt="شعار مجموعة صالح للسيارات"> -->
+                        <img width="255" height="102" src= "/frontend/images/logo.png" alt="شعار مجموعة انذر كار ">
+                        <!-- <img width="255" height="102" src="fonts/Saleh_Logo_ar.svg" alt="شعار مجموعة انذر كار "> -->
                     </a>
                 </div>
                 <div class="col-md-7 topNav d-none d-md-block order-2">

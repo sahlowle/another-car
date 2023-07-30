@@ -7,14 +7,14 @@
     <meta name="author" content="sahlowle">
     <meta name="author" content="sahlowle (https://www.sahlowle.com)">
     <meta name="description"
-        content="مجموعة صالح للسيارات موزع معتمد للسيارات بالمملكة العربية السعودية متخصصون في بيع السيارات الجديدة ونقدم تجربة فريدة في شراء السيارات بخدمة عملاء متميزة وخدمات ما بعد البيع">
+        content="مجموعة انذر كار  موزع معتمد للسيارات بالمملكة العربية السعودية متخصصون في بيع السيارات الجديدة ونقدم تجربة فريدة في شراء السيارات بخدمة عملاء متميزة وخدمات ما بعد البيع">
     <meta name="keywords"
         content="عروض السيارات اسعار السيارات سيارات عروض سيارات موقع بيع سيارات مواقع بيع السيارات اقساط سيارات سيارات اقساط السيارات الجديدة اخر عروض السيارات">
     <meta property="og:title" content="الرئيسية">
     <meta property="og:description" content>
     <meta property="og:image" content= "/frontend/images/logo.png">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="مجموعة صالح للسيارات">
+    <meta property="og:site_name" content="مجموعة انذر كار ">
     <meta property="og:url" content="{{ url('') }}">
     <meta property="og:locale" content="ar_AR">
     <meta name="twitter:card" content="summary">
