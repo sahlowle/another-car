@@ -17,10 +17,14 @@
     }
 
     .btn-tab {
+        cursor: pointer;
         width: 300px !important;
         border: 2px solid var(--red) !important;
     }
-
+    .btn-tab:hover {
+        background-color: var(--red);
+        color: #ffffff
+    }
     li.nav-item {
         margin: 0.5rem 1rem;
     }
