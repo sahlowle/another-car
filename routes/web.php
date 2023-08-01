@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Http;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,71 @@ use App\Http\Controllers\UserController;
 | contains the "web" middleware group. Now create something great!
 |
  */
+
+
+Route::get('/clean-json', function () {
+
+    $response = Http::get('https://coderbyte.com/api/challenges/json/json-cleaning');
+
+    $data =  $response->object();
+// return $data;
+
+
+    foreach ($data as $key => $item) {
+        if (is_object($item)) {
+           return $item;
+        }
+        if (is_array($item)){
+            //  Scan through inner loop
+            foreach ($item as $key2 => $value) {
+
+                dd($item);
+                if ($value=='') {
+                    unset($item[$key2]);
+                }
+            }
+        }else{
+            // one, two, three
+            // echo $item;
+        }
+    }
+return $data;
+
+
+})->name('json');
+
+Route::get('/json', function () {
+
+    $response = Http::get('https://coderbyte.com/api/challenges/json/age-counting');
+
+    $data =  $response->object();
+    
+    $arr = explode(",",$data->data);
+
+    // return $arr;
+    
+    $data = [];
+
+    foreach ($arr as $item) {
+        $str = str_replace(' ', '', $item);
+
+        $key = strtok($str, '=');
+        $value = (int)substr($item, strpos($item, '=')+1);
+
+        if ($key == 'age' && $value >=50) {
+            $arr_item = [$key => $value];
+            array_push($data,$arr_item);
+        }
+    }
+
+    return count($data);
+
+    foreach ($data as $item) {
+       return $item;
+    }
+
+
+})->name('json');
 
 
 Route::get('/', function () {
