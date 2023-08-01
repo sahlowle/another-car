@@ -8,10 +8,10 @@
     <div class="header" dir="ltr">
         <div class="container">
             <div class="row">
-                <div class="search d-block d-md-none col-12">
+                {{-- <div class="search d-block d-md-none col-12">
                     <a href="javascript:void(0);" class="icon" id="searchIcon"><i class="fa fa-search fa-lg"
                             aria-hidden="true" title="Toggle navigation"></i></a>
-                </div>
+                </div> --}}
                 <ul class="resultsm">
                 </ul>
                 <div class="col-md-3 order-3">
