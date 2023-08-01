@@ -123,49 +123,142 @@
             <!-- tab content -->
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                    <div class="row m-2" dir="rtl">
-                       
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="sellers-mobile">
-                                    <i class="fas fa-phone"></i>
-                                    رقم جوال البائع
-                                </label>
-                                <input type="number" class="form-control" id="sellers-mobile"
-                                    aria-describedby="sellersMobile">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="sellers-mobile">
-                                    <i class="fas fa-phone"></i>
-                                    رقم جوال المشتري
-                                </label>
-                                <input type="number" class="form-control" id="sellers-mobile"
-                                    aria-describedby="sellersMobile">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <label for="sellers-mobile"> 
-                                <i class="fas fa-file"></i>
-                                المستندات 
-                            </label>
-                            <div class="file-upload" style="cursor: pointer">
-                                <input name="files" multiple type="file" id="upload" class="upload" style="cursor: pointer">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <ul class="instructions">
-                                <h5>test title</h5>
-                                <li class="w-0">test 1</li>
-                                <li class="w-0">test 2</li>
-                            </ul>
-                        </div>
+                    
+                    @if($errors->any())
+                    <div class="alert alert-danger mb-2">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
                     </div>
-                        <button class="btn btn-save">حفظ</button>
+                    @endif
+                    <form method="POST" action="{{ route('service.store') }}" enctype="multipart/form-data">
+                        @csrf
+                        <input type="hidden" name="type" value="1">
+
+                        <div class="row m-2" dir="rtl">
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="sellers-mobile">
+                                        <i class="fas fa-phone"></i>
+                                        رقم جوال البائع
+                                    </label>
+                                    <input required name="seller_phone" type="number" class="form-control"
+                                        aria-describedby="sellersMobile">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="sellers-mobile">
+                                        <i class="fas fa-phone"></i>
+                                        رقم جوال المشتري
+                                    </label>
+                                    <input required name="buyer_phone" type="number" class="form-control"
+                                        aria-describedby="sellersMobile">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="sellers-mobile">
+                                    <i class="fas fa-file"></i>
+                                    المستندات
+                                </label>
+                                <div class="file-upload" style="cursor: pointer">
+                                    <input required name="files[]" multiple type="file" id="upload" class="upload"
+                                        style="cursor: pointer">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <ul class="instructions">
+                                    <h5> المستندات المطلوبة </h5>
+                                    <li class="w-0"> مستند 1 </li>
+                                    <li class="w-0"> مستند 2 </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col text-center">
+                            <button class="btn btn-save text-center">
+                                <h4>
+                                    حفظ
+                                    <i class="fas fa-save"></i>
+                                </h4>
+                            </button>
+                        </div>
+                    </form>
+                    
+
                 </div>
+
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    tab2
+                    @if($errors->any())
+                    <div class="alert alert-danger mb-2">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+                    <form method="POST" action="{{ route('service.store') }}" enctype="multipart/form-data">
+                        @csrf
+                        <input type="hidden" name="type" value="2">
+
+                        <div class="row m-2" dir="rtl">
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="sellers-mobile">
+                                        <i class="fas fa-phone"></i>
+                                        رقم جوال البائع
+                                    </label>
+                                    <input required name="seller_phone" type="number" class="form-control"
+                                        aria-describedby="sellersMobile">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="sellers-mobile">
+                                        <i class="fas fa-phone"></i>
+                                        رقم جوال المشتري
+                                    </label>
+                                    <input required name="buyer_phone" type="number" class="form-control"
+                                        aria-describedby="sellersMobile">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="sellers-mobile">
+                                    <i class="fas fa-file"></i>
+                                    المستندات
+                                </label>
+                                <div class="file-upload" style="cursor: pointer">
+                                    <input required name="files[]" multiple type="file" id="upload" class="upload"
+                                        style="cursor: pointer">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <ul class="instructions">
+                                    <h5> المستندات المطلوبة </h5>
+                                    <li class="w-0"> مستند 1 </li>
+                                    <li class="w-0"> مستند 2 </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col text-center">
+                            <button class="btn btn-save text-center">
+                                <h4>
+                                    حفظ
+                                    <i class="fas fa-save"></i>
+                                </h4>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

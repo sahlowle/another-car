@@ -23,28 +23,28 @@ Route::get('/clean-json', function () {
     $response = Http::get('https://coderbyte.com/api/challenges/json/json-cleaning');
 
     $data =  $response->object();
-// return $data;
-
-
+    // return $data;
+    
     foreach ($data as $key => $item) {
         if (is_object($item)) {
-           return $item;
+            return $item;
         }
+        
         if (is_array($item)){
             //  Scan through inner loop
             foreach ($item as $key2 => $value) {
-
                 dd($item);
                 if ($value=='') {
                     unset($item[$key2]);
                 }
             }
-        }else{
+        }
+        else{
             // one, two, three
             // echo $item;
         }
     }
-return $data;
+    return $data;
 
 
 })->name('json');
@@ -91,8 +91,11 @@ Route::get('/service', function () {
     return view('service');
 })->name('service');
 
+Route::post('/service',[ServiceController::class,'store'])->name('service.store');
+
 Route::prefix('admin')->middleware(['auth','web'])->group(function () {
 
+    Route::redirect('/', 'admin/dashboard');
     Route::get('/edit_profile',[ProfileController::class,'edit_profile']);
     Route::post('/update_profile',[ProfileController::class,'update_profile']);
     Route::post('/update_password',[ProfileController::class,'update_password']);
@@ -102,7 +105,8 @@ Route::prefix('admin')->middleware(['auth','web'])->group(function () {
     Route::resource('/users',UserController::class);
 
 
-    Route::resource('/dashboard',ServiceController::class);
+    Route::get('/dashboard',[ServiceController::class,'index']);
+    Route::get('/service/{id}/files',[ServiceController::class,'filesPage']);
 
 
     // Route::get('/dashboard', function () {

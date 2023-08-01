@@ -5,15 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model
+class File extends Model
 {
     use HasFactory;
 
     protected $guarded = ['id'];
+    
+    protected $appends = ['full_path'];
 
-
-    public function files()
-    {
-        return $this->hasMany(File::class, 'service_id');
-    }
+    public function getFullPathAttribute()
+{
+    return url('').'/'.$this->path;
+}
 }
