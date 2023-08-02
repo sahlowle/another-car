@@ -1,4 +1,4 @@
-   let lazyloadImage = "https://salehcars.com/web/img/lazyloadImage.svg";
+   let lazyloadImage = "https://anothercars.com/frontend/images/logo.png";
 
         $('.slider').find('img').each(function () {
             if ($(this).data('bgfit') != 'cover') {
