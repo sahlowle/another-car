@@ -591,6 +591,13 @@ nav.inFixed ul li ul li a {
     color: #fff;
 }
 
+@media(max-width: 768px) {
+    .slider {
+        background-repeat: no-repeat;
+        background-position: -150px 0;
+    }
+}
+
 /* Filter */
 .filterHome {
     direction: rtl;
@@ -4670,6 +4677,7 @@ a#sendAnyWayDisplaySecondPart {
         top: 42%;
         width: 100%;
     }
+
     .slider {
         margin-top: -105px;
     }
