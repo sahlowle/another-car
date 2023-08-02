@@ -62,14 +62,14 @@
     </div>
     <div class="cr">
         <p id="c1">
-            جميع الحقوق محفوظة <a href="{{ url('') }}"> anothercar  </a> © 2021
+            جميع الحقوق محفوظة <a href="{{ url('') }}"> Anothercar  </a> © {{ date('Y') }}
         </p>
         <p id="c2">
-            تم تطويره بواسطة : <a title="Sohail" target="_blank"
-                href="#">
-                <img class="lazyload" src="/frontend/images/logo.png" data-src="/frontend/images/logo.png"
-                    title="Sohail"
-                    alt="Sohail" style="height:30px">
+            تم تطويره بواسطة : 
+            <a title="Sohail" target="_blank" href="https://suhail-osman.com">
+                <img class="lazyload" src="/frontend/images/light.png" data-src="/frontend/images/light.png"
+                    title="Suhail Osman"
+                    alt="Suhail" style="height:30px">
             </a>
         </p>
 
