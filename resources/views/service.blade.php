@@ -56,7 +56,7 @@
         text-align: center;
         color: #000;
         position: absolute;
-        top: 20%;
+        top: 30%;
         left: 0;
         right: 0;
         display: flex;
