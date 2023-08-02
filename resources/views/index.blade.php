@@ -86,7 +86,7 @@
                             alt="صورة الوقوفسعرنا هو الأفضل" src="/frontend/images/logo.png"
                             data-src="https://salehcars.com/storage/whysaleh/5e4a50633f6791581928547.svg">
                         <div class="new_service_wrap">
-                            <a class="new_service_link" href="https://salehcars.com/whySaleh#whySaleh_2">
+                            <a class="new_service_link" href="#">
                                 <h2 class="new_service_head">سعرنا هو الأفضل</h2>
                             </a>
                             <div class="new_service_text">
@@ -107,7 +107,7 @@
                             alt="صورة الوقوفنضمن لك سيارتك الجديدة" src="/frontend/images/logo.png"
                             data-src="https://salehcars.com/storage/whysaleh/5e4a508b25bae1581928587.svg">
                         <div class="new_service_wrap">
-                            <a class="new_service_link" href="https://salehcars.com/whySaleh#whySaleh_3">
+                            <a class="new_service_link" href="#">
                                 <h2 class="new_service_head">نضمن لك سيارتك الجديدة</h2>
                             </a>
                             <div class="new_service_text">
@@ -130,7 +130,7 @@
                             data-src="https://salehcars.com/storage/whysaleh/5e4a509c10e841581928604.svg">
 
                         <div class="new_service_wrap">
-                            <a class="new_service_link" href="https://salehcars.com/whySaleh#whySaleh_6">
+                            <a class="new_service_link" href="#">
                                 <h2 class="new_service_head">خدمات المساعدة على الطريق</h2>
                             </a>
 
