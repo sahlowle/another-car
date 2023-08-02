@@ -112,7 +112,9 @@ body {
                 </p>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+				<a href="{{ route('index') }}" class="btn btn-success btn-block" data-dismiss="modal">
+					OK
+				</a>
 			</div>
 		</div>
 	</div>

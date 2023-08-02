@@ -162,21 +162,44 @@
                             </div>
 
                             <div class="col-md-12">
-                                <label for="sellers-mobile">
-                                    <i class="fas fa-file"></i>
-                                    المستندات
-                                </label>
-                                <div class="file-upload" style="cursor: pointer">
-                                    <input required name="files[]" multiple type="file" id="upload" class="upload"
-                                        style="cursor: pointer">
+                                <div class="form-group">
+                                    <label for="sellers-mobile">
+                                        <i class="fas fa-file"></i>
+                                        هوية البائع
+                                    </label>
+                                    <input required name="seller_doc" type="file" class="form-control"
+                                        aria-describedby="sellersMobile">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="sellers-mobile">
+                                        <i class="fas fa-file"></i>
+                                        هوية المشتري
+                                    </label>
+                                    <input required name="buyer_doc" type="file" class="form-control"
+                                        aria-describedby="sellersMobile">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="sellers-mobile">
+                                        <i class="fas fa-file"></i>
+                                        الاستمارة 
+                                    </label>
+                                    <input required name="form_doc" type="file" class="form-control"
+                                        aria-describedby="sellersMobile">
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <ul class="instructions">
                                     <h5> المستندات المطلوبة </h5>
-                                    <li class="w-0"> مستند 1 </li>
-                                    <li class="w-0"> مستند 2 </li>
+                                    <li class="w-6">  هوية البائع </li>
+                                    <li class="w-6">  هوية المشتري </li>
+                                    <li class="w-6">   الاستمارة </li>
                                 </ul>
                             </div>
                         </div>
@@ -232,21 +255,56 @@
                             </div>
 
                             <div class="col-md-12">
-                                <label for="sellers-mobile">
-                                    <i class="fas fa-file"></i>
-                                    المستندات
-                                </label>
-                                <div class="file-upload" style="cursor: pointer">
-                                    <input required name="files[]" multiple type="file" id="upload" class="upload"
-                                        style="cursor: pointer">
+                                <div class="form-group">
+                                    <label for="sellers-mobile">
+                                        <i class="fas fa-file"></i>
+                                         السجل التجاري
+                                    </label>
+                                    <input required name="company_doc" type="file" class="form-control"
+                                        aria-describedby="sellersMobile">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="sellers-mobile">
+                                        <i class="fas fa-file"></i>
+                                          خطاب مصدق من الغرفة التجارية
+                                    </label>
+                                    <input required name="commercial_doc" type="file" class="form-control"
+                                        aria-describedby="sellersMobile">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="sellers-mobile">
+                                        <i class="fas fa-file"></i>
+                                              هوية المكفول
+                                    </label>
+                                    <input required name="mcfool_doc" type="file" class="form-control"
+                                        aria-describedby="sellersMobile">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="sellers-mobile">
+                                        <i class="fas fa-file"></i>
+                                               الاستمارة
+                                    </label>
+                                    <input required name="form_doc" type="file" class="form-control"
+                                        aria-describedby="sellersMobile">
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <ul class="instructions">
                                     <h5> المستندات المطلوبة </h5>
-                                    <li class="w-0"> مستند 1 </li>
-                                    <li class="w-0"> مستند 2 </li>
+                                    <li class="w-6"> السجل التجاري </li>
+                                    <li class="w-6"> خطاب مصدق من الغرفة التجارية </li>
+                                    <li class="w-6"> هوية المكفول </li>
+                                    <li class="w-6"> الاستمارة </li>
                                 </ul>
                             </div>
                         </div>

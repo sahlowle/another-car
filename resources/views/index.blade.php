@@ -152,8 +152,40 @@
             <!-- row -->
         </div> <!-- container -->
     </section>
+    
     <div class="clearfix"></div>
+    <!-- services -->
+    <section id="services" class="drive_quote">
+        <div class="container_fluid">
+            <div class="col-md-6 float-right min_335" style="background-color:#c2000b;">
+                <div id="buy_car_home">
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-7">
 
+                            <div class="sec-head">
+                                <h2 class="text-white text-right">
+                                    خدمة طلب
+                                    نقل مليكة سيارة 
+                                    
+                                </h2>
+                            </div>
+                            <div class="buy_car_text">
+                                إرفق البيانات المطلوبة وسنقوم بمساعدتك فورا" بنقل مليكة السيارة التي ترغب بها .
+                            </div>
+                            <!-- <a href="{{ url('') }}/buy_company" class="buy_car_home_btn">شركات</a> -->
+                            <a href="{{ route('service') }}" class=" buy_car_home_btn">اطلب الأن</a>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 float-right min_335 hideOnMobile background-lazyload"
+                style="background:url(&#x27;frontend/images/logo.png&#x27;)" data-src="/frontend/images/buy_car.jpg"></div>
+        </div>
+    </section>
+ 
+    <div class="clearfix"></div>
     <!-- brands -->
     <section id="brands" class="brands">
         <div class="container">
@@ -480,36 +512,7 @@
             </div>
         </div>
     </section>
-    <!-- services -->
-    <section id="services" class="drive_quote">
-        <div class="container_fluid">
-            <div class="col-md-6 float-right min_335" style="background-color:#c2000b;">
-                <div id="buy_car_home">
-                    <div class="row">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-7">
 
-                            <div class="sec-head">
-                                <h2 class="text-white text-right">
-                                    خدمة طلب
-                                    نقل مليكة سيارة 
-                                    
-                                </h2>
-                            </div>
-                            <div class="buy_car_text">
-                                إرفق البيانات المطلوبة وسنقوم بمساعدتك فورا" بنقل مليكة السيارة التي ترغب بها .
-                            </div>
-                            <!-- <a href="{{ url('') }}/buy_company" class="buy_car_home_btn">شركات</a> -->
-                            <a href="{{ route('service') }}" class=" buy_car_home_btn">اطلب الأن</a>
-                        </div>
-                        <div class="col-md-1"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 float-right min_335 hideOnMobile background-lazyload"
-                style="background:url(&#x27;frontend/images/logo.png&#x27;)" data-src="/frontend/images/buy_car.jpg"></div>
-        </div>
-    </section>
 
     <div class="container best_price">
         <div class="row">

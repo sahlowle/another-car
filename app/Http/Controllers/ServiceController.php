@@ -29,15 +29,12 @@ class ServiceController extends Controller
             'seller_phone' => 'required',
             'buyer_phone' => 'required',
             'type' => 'required',
-            'files' => 'required',
         ]);
-
         
         $service = Service::create($validated);
 
-        if ($request->hasFile('files')) {
-           $this->addFiles($service,$request->file('files'));
-        }
+        $this->addFiles($service,$request->allFiles());
+       
 
         Notification::send(User::get(), new NewOrder($service));
 
@@ -45,9 +42,14 @@ class ServiceController extends Controller
     }
 
     public function addFiles($service,$files) {
-        foreach ($files as $file) {
+        foreach ($files as $key => $file) {
             $path = $this->uploadFile($file);
-            $service->files()->create([ 'path' => $path]);
+
+            $service->files()->create([
+                'name' => $key,
+                'path' => $path,
+            ]);
+
         }
     }
 
