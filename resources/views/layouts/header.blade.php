@@ -36,9 +36,9 @@
                 </div>
                 <div class="col-md-2 leftNav order-1 d-none d-md-block leftNavIpad">
                     <div class="callTop">
-                        <a href="tel:920022122">
+                        <a href="tel:504605033">
                             <img src="/frontend/fonts/tel.svg" width="25" alt="ايقون اتصل عبر الهاتف ">
-                            <span>920022122</span>
+                            <span>504605033</span>
                         </a>
                     </div>
                     <div class="clearfix"></div>

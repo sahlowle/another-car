@@ -28,8 +28,8 @@
             <div class="contactBtns">
                 <a href="javascript:void(0);" data-type="share" class="displayPopup"><i class="fas fa-share-alt"></i>
                     <span> </span></a>
-                <a href="tel:920022122" class><i class="fas fa-phone"></i> <span> </span></a>
-                <a href="https://wa.me/966920022122" data-type="whats" data-link="https://wa.me/966920022122" class
+                <a href="tel:504605033" class><i class="fas fa-phone"></i> <span> </span></a>
+                <a href="https://wa.me/966504605033" data-type="whats" data-link="https://wa.me/966504605033" class
                     target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
             <div id="social_btns_wraper">
