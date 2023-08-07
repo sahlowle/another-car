@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Http;
 
 /*
@@ -82,6 +83,11 @@ Route::get('/json', function () {
 
 })->name('json');
 
+
+Route::get('/down ', function () {
+    Artisan::call('down');
+    return "yes";
+})->name('down');
 
 Route::get('/', function () {
     return view('index');
