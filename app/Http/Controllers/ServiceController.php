@@ -14,7 +14,7 @@ class ServiceController extends Controller
     public function paymentSuccess(Request $request) {
 
         if ($request->isNotFilled('tap_id')) {
-            abort(403);
+            return view('payment-fail');
         }
 
         $payment_id = $request->tap_id;
