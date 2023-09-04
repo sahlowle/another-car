@@ -20,6 +20,8 @@ return [
 
     'currency' => 'SAR',
 
-    'redirect_url' => 'http://localhost:8000/api/payment-success',
+    'redirect_url' => 'https://anothercars.com/api/payment-success',
+
+    // 'redirect_url' => 'http://localhost:8000/api/payment-success',
     
 ];
