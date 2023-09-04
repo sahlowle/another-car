@@ -10,7 +10,7 @@ return [
 
     'base_url' => 'https://api.tap.company/v2/',
 
-    'token' => 'sk_test_vET4aBJuLFVfHIYDMoKRr8wn',
+    'token' => 'sk_live_5ic0z1xInsF2bXepWRgD6Akw',
 
     'sk_test' => 'sk_test_vET4aBJuLFVfHIYDMoKRr8wn',
     'sk_live' => 'sk_live_5ic0z1xInsF2bXepWRgD6Akw',
