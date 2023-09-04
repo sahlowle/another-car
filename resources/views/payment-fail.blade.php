@@ -188,6 +188,15 @@
             -ms-transform: translateY(0%);
         }
     }
+
+    .fcc-btn {
+        background-color: #1821cc;
+        color: white;
+        padding: 15px 25px;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+    }
 </style>
 
 <body>
@@ -209,7 +218,15 @@
                     <div class="order-details">
                         <div class="order-number"> {{ @$order_no }} </div>
                         <div class="complement">شكرا لك !</div>
-                    </div>
+                        <div class="complement">
+                            <br>
+                  
+                        <a href="{{ route('index') }}" class="fcc-btn">
+                            الرئيسية
+                        </a>
+                        </div>
+                        
+                  
                 </div>
                 <div class="jagged-edge"></div>
             </div>

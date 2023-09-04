@@ -41,13 +41,13 @@
     .paper-container {
         position: relative;
         overflow: hidden;
-        height: 467px;
+        height: 500px;
     }
 
     .paper {
         background: #ffffff;
         font-family: 'Noto Sans Arabi', sans-serif;
-        height: 447px;
+        height: 500px;
         position: absolute;
         z-index: 2;
         margin: 0 12px;
@@ -188,6 +188,20 @@
             -ms-transform: translateY(0%);
         }
     }
+
+    .btn-success{
+        background-color: #32a852;
+        padding: .5rem;
+        color: #fff;
+        border-radius: 50%;
+    }
+
+    td{
+        padding-right:2rem;
+    }
+    .call{
+        color: #333333
+    }
 </style>
 
 <body>
@@ -210,6 +224,25 @@
                         <div class="order-number-label"> رقم الطلب </div>
                         <div class="order-number"> {{ @$order_no }} </div>
                         <div class="complement">شكرا لك !</div>
+                        <div class="">
+                            <hr>
+                            <br>
+                        </div>
+                        <div class="complement">
+                            <table>
+                                <tr>
+                                    <td>   <a href="tel:966504605033">  966504605033 </a> </td>
+                                    <td class="call"> اتصل بنا 📞 </td>
+                                    
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    {{-- <br>
+                    <div class="order-details">
+                        <a href="{{ route('index') }}" class="btn btn-success btn-block" data-dismiss="modal">
+                            OK
+                        </a> --}}
                     </div>
                 </div>
                 <div class="jagged-edge"></div>

@@ -16,11 +16,8 @@ class TapPaymentService
     public static function charge($data)
     {
         $body = TapPaymentService::getBody($data);
-
-        $token = config('tap_payment.sk_test');
         
-        
-        $request = TapPaymentService::makeRequest($token);
+        $request = TapPaymentService::makeRequest();
 
         $response =  $request->post('/charges',$body);
 
@@ -34,9 +31,8 @@ class TapPaymentService
     */
     public static function getCharge($charge_id)
     {
-        $token = config('tap_payment.sk_test');
         
-        $request = TapPaymentService::makeRequest($token);
+        $request = TapPaymentService::makeRequest();
 
         $url = "/charges/".$charge_id;
 
@@ -50,9 +46,11 @@ class TapPaymentService
     | Make Request
     |--------------------------------------------------------------------------
     */
-    public static function makeRequest($token)
+    public static function makeRequest()
 	{
         $base_url = config('tap_payment.base_url','https://api.tap.company/v2');
+
+        $token = config('tap_payment.token');
 
 		$request = Http::baseUrl($base_url)->asJson()->withToken($token)->withHeaders(['lang_code'=>'AR']);
 
