@@ -38,10 +38,13 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
+                                            <th>رقم الطلب</th>
                                             <th> رقم جوال البائع </th>
                                             <th> رقم جوال المشتري </th>
                                             <th> نوع الخدمة </th>
                                             <th>الملفات</th>
+                                            <th> الحالة </th>
+                                            <th> خيارات </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -49,6 +52,7 @@
                                             <tr>
                                                 <td>{{ $loop->index + 1 }}</td>
                                                 
+                                                <td>{{ $item->order_no }}</td>
                                                 <td>{{ $item->seller_phone }}</td>
                                                 <td>{{ $item->buyer_phone }}</td>
                                                 <td>
@@ -68,6 +72,24 @@
                                                         data-target="#edit_modal">
                                                         <i class="fa fa-clipboard" aria-hidden="true"></i>
                                                     </button>
+                                                </td>
+
+                                                <td>
+                                                    @if ($item->is_paid)
+                                                        تم الدفع
+                                                        <i style="color: #28C76F; font-size: 2rem" class="fa fa-check"></i>
+                                                    @else
+                                                        غير مدفوع
+                                                        <i class="fa fa-close" style="font-size:2rem;color:red"></i>
+                                                    @endif
+                                                </td>
+
+                                                <td>
+                                                    <a class="btn btn-primary" 
+                                                        href="{{ route('service.paymentSuccess', ['tap_id'=>$item->payment_id]) }}" >
+                                                        مراجعة
+                                                        <i class="fa fa-money" aria-hidden="true"></i>
+                                                    </a>
                                                 </td>
                                             </tr>
                                         @endforeach
