@@ -86,6 +86,11 @@ Route::get('/json', function () {
 })->name('jsonM');
 
 
+Route::get('/optimize ', function () {
+    Artisan::call('optimize');
+    return "yes";
+})->name('optimize');
+
 Route::get('/down ', function () {
     Artisan::call('down');
     return "yes";
