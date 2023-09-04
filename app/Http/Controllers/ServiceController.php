@@ -5,11 +5,36 @@ namespace App\Http\Controllers;
 use App\Models\Service;
 use App\Models\User;
 use App\Notifications\NewOrder;
+use App\Services\TapPaymentService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Notification;
 
 class ServiceController extends Controller
 {
+    public function paymentSuccess(Request $request) {
+
+        if ($request->isNotFilled('tap_id')) {
+            abort(403);
+        }
+
+        $payment_id = $request->tap_id;
+
+        $response = TapPaymentService::getCharge($payment_id);
+
+        // dd($response);
+        
+        if (isset($response->status) && $response->status == "CAPTURED"){
+            $service = Service::where('payment_id',$payment_id)->first();
+            $service->update(['is_paid' => true ]);
+            $order_no = $service->order_no;
+            return view('payment-success',compact('order_no'));
+        }
+
+        return view('payment-fail');
+
+        
+    }
+
     public function index(Request $request) {
 
         $data = Service::latest('id')->paginate(10);
@@ -37,6 +62,28 @@ class ServiceController extends Controller
        
 
         Notification::send(User::get(), new NewOrder($service));
+
+        $phone_number = ltrim($service->buyer_phone,'966') ;
+
+        $body = [
+            'amount'=> 300,
+            'description'=> 'Transfer of car ownership',
+            'first_name'=> 'Mohammed',
+            'last_name'=> 'Abdelwahid',
+            'email'=> 'ahmed@gmail.com',
+            'country_code'=> 966,
+            'phone_number'=> $phone_number,
+        ];
+
+        // return $body;
+
+        $response  = TapPaymentService::charge($body);
+
+        $payment_id = $response->id;
+
+        $service->update(['payment_id' => $payment_id ]);
+
+        return redirect($response->transaction->url);
 
         return view('success');
     }

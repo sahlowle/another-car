@@ -18,7 +18,7 @@ body {
 }
 .modal-confirm {		
 	color: #636363;
-	width: 325px;
+	width: 400;
 	font-size: 20px;
 }
 .modal-confirm .modal-content {
@@ -104,12 +104,17 @@ body {
 				<div class="icon-box">
 					<i class="material-icons">&#xE876;</i>
 				</div>				
-				<h4 class="modal-title w-100">شكرا لك!</h4>	
+				<h4 class="modal-title w-100 text-center">شكرا لك!</h4>	
 			</div>
 			<div class="modal-body">
 				<p class="text-center">
                     لقد تم استلام طلبك وسيتم التواصل معك في اقرب وقت
                 </p>
+
+				<h1 class="text-center"> رقم الطلب 
+					<br>
+					#12345
+				</h1>
 			</div>
 			<div class="modal-footer">
 				<a href="{{ route('index') }}" class="btn btn-success btn-block" data-dismiss="modal">

@@ -16,4 +16,31 @@ class Service extends Model
     {
         return $this->hasMany(File::class, 'service_id');
     }
+
+    static function genOrderNumber()  {
+        $latestOrder = Service::latest('id')->first();
+
+        $id = 0;
+        
+        if (is_null($latestOrder)) {
+            $id = 0;
+        } else {
+            $id = $latestOrder->id;
+        }
+
+        
+
+        $order_no = '#'.str_pad($id + 1, 8, "0");
+
+        return $order_no;
+    }
+
+    protected static function booted()
+    {
+        static::creating(function ($service) {
+
+           $service->order_no = Service::genOrderNumber();
+
+        });
+    }
 }

@@ -21,6 +21,8 @@ use Illuminate\Support\Facades\Http;
 
 Route::get('/clean-json', function () {
 
+    return view('payment-success');
+
     $response = Http::get('https://coderbyte.com/api/challenges/json/json-cleaning');
 
     $data =  $response->object();
@@ -81,7 +83,7 @@ Route::get('/json', function () {
     }
 
 
-})->name('json');
+})->name('jsonM');
 
 
 Route::get('/down ', function () {
@@ -120,4 +122,5 @@ Route::prefix('admin')->middleware(['auth','web'])->group(function () {
     // })->name('dashboard');
     
 });
+
 require __DIR__ . '/auth.php';
